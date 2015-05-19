@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uxj-2I-pz5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="iTu-0A-Nv9"/>
+                                </connections>
+                            </webView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the url" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7hg-lG-h0u">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="VGz-RW-niQ"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="7hg-lG-h0u" secondAttribute="trailing" constant="-5" id="EMd-Zx-3ru"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uxj-2I-pz5" secondAttribute="trailing" constant="-16" id="F0X-y4-Gmu"/>
+                            <constraint firstItem="uxj-2I-pz5" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="Q4d-n3-AG4"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="uxj-2I-pz5" secondAttribute="bottom" id="Yex-YS-A4R"/>
+                            <constraint firstItem="7hg-lG-h0u" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="eR6-eY-rc2"/>
+                            <constraint firstItem="7hg-lG-h0u" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="jrz-HQ-9sR"/>
+                            <constraint firstItem="uxj-2I-pz5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="s0r-d2-CeE"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="7hg-lG-h0u"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="F0X-y4-Gmu"/>
+                                <exclude reference="Q4d-n3-AG4"/>
+                                <exclude reference="s0r-d2-CeE"/>
+                                <exclude reference="Yex-YS-A4R"/>
+                                <exclude reference="EMd-Zx-3ru"/>
+                                <exclude reference="eR6-eY-rc2"/>
+                                <exclude reference="jrz-HQ-9sR"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="7hg-lG-h0u"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="F0X-y4-Gmu"/>
+                                <include reference="Q4d-n3-AG4"/>
+                                <include reference="s0r-d2-CeE"/>
+                                <include reference="Yex-YS-A4R"/>
+                                <include reference="EMd-Zx-3ru"/>
+                                <include reference="eR6-eY-rc2"/>
+                                <include reference="jrz-HQ-9sR"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="uxj-2I-pz5" id="bBu-ZQ-Si4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="376.5" y="309"/>
+        </scene>
+    </scenes>
+</document>
